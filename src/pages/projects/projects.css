@@ -1,0 +1,125 @@
+.projects_container {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.projects_item {
+    display: flex;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    border: 2px solid var(--first-color);
+    background-color: var(--text-white);
+}
+
+.projects_desc {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    text-align: center;
+    color: var(--text-white);
+    font-size: var(--large-font-size);
+    background-color: rgba(0, 0, 0, 0.85);
+    opacity: 0;
+    transition: opacity 0.25s;
+    border-radius: 20px;
+    overflow: auto;
+    cursor: pointer;
+}
+
+.projects_desc>* {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.projects_desc:hover {
+    opacity: 1;
+    box-shadow: 0 0 15px var(--first-color);
+}
+
+.projects_desc:hover>* {
+    transform: translateY(0);
+}
+
+.projects_desc_overflow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 15px 10px 15px 15px;
+    text-align: center;
+    color: var(--text-white);
+    font-size: var(--large-font-size);
+    background-color: rgba(0, 0, 0, 0.85);
+    opacity: 0;
+    transition: opacity 0.25s;
+    border-radius: 20px;
+    overflow: auto;
+    cursor: pointer;
+}
+
+.projects_desc_overflow>* {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.projects_desc_overflow:hover {
+    opacity: 1;
+    box-shadow: 0 0 15px var(--first-color);
+}
+
+.projects_desc_overflow:hover>* {
+    transform: translateY(0);
+}
+
+.projects_desc_overflow::-webkit-scrollbar {
+    width: 5px;
+}
+
+.projects_desc_overflow::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.projects_desc_overflow::-webkit-scrollbar-thumb {
+    background-color: var(--text-color);
+    border-radius: 20px;
+}
+
+.projects_desc_overflow::-webkit-scrollbar-track-piece:end {
+    background: transparent;
+    margin-bottom: 15px;
+}
+
+.projects_desc_overflow::-webkit-scrollbar-track-piece:start {
+    background: transparent;
+    margin-top: 15px;
+}
+
+.item_title {
+    text-align: center;
+    color: var(--text-white);
+    font-weight: var(--weight-700);
+    font-size: var(--h2-font-size);
+    margin: 0 0 20px;
+}
+
+.item_img {
+    height: 250px;
+    width: 100%;
+    object-fit: contain;
+    display: block;
+    border-radius: 20px;
+}
+
+.item_button {
+    color: var(--text-white);
+}
+
+@media screen and (max-width: 768px) {
+    .projects_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -1,0 +1,132 @@
+.contact_container {
+    grid-template-columns: 4fr 8fr;
+}
+
+.contact_title {
+    font-size: var(--h3-font-size);
+    font-weight: var(--weight-600);
+    margin-bottom: 1rem;
+}
+
+.contact_description {
+    font-size: var(--small-font-size);
+    line-height: 1.6;
+}
+
+.contact_description,
+.contact_info .info_item {
+    margin-bottom: 20px;
+}
+
+.contact_info .info_item {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+}
+
+.contact_info .info_icon {
+    color: var(--first-color);
+    font-size: var(--h2-font-size);
+}
+
+.contact_info .info_title {
+    font-size: var(--small-font-size);
+}
+
+.contact_info .info_desc {
+    font-family: var(--body-font);
+    font-size: var(--small-font-size);
+    font-weight: var(--weight-500);
+}
+
+.contact_socials {
+    display: flex;
+    column-gap: 16px;
+}
+
+.contact_socials_link {
+    background-color: var(--container-color);
+    color: var(--title-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    transition: all 0.3 ease;
+}
+
+.contact_socials_link:hover {
+    background-color: var(--first-color);
+    color: var(--text-white);
+}
+
+.form_input_group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+}
+
+.form_input_div {
+    margin-bottom: 30px;
+}
+
+.form_control {
+    border: 1px solid var(--container-color);
+    background-color: var(--container-color);
+    color: var(--title-color);
+    width: 100%;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: var(--small-font-size);
+    transition: all 0.3s ease;
+}
+
+.form_control:focus {
+    border-color: var(--first-color);
+}
+
+.textarea {
+    resize: none;
+    height: 160px;
+}
+
+.textarea::-webkit-scrollbar {
+    width: 5px;
+}
+
+.textarea::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.textarea::-webkit-scrollbar-thumb {
+    background-color: var(--text-color);
+    border-radius: 20px;
+}
+
+.textarea::-webkit-scrollbar-track-piece:end {
+    background: transparent;
+    margin-bottom: 3px;
+}
+
+.textarea::-webkit-scrollbar-track-piece:start {
+    background: transparent;
+    margin-top: 3px;
+}
+
+.contact_button_icon {
+    font-size: var(--h3-font-size);
+    line-height: 60px;
+}
+
+@media screen and (max-width: 768px) {
+    .contact_container {
+        grid-template-columns: none;
+        grid-template-rows: auto;
+        row-gap: 60px;
+    }
+
+    .contact_info {
+        grid-template-columns: 300px auto;
+        display: grid;
+    }
+}
