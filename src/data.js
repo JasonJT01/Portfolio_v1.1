@@ -170,7 +170,7 @@ export const resume = [
         id: 3,
         category: 'education',
         icon: <FontAwesomeIcon icon={faGraduationCap} className='resume_icon' />,
-        date: 'August 2019 - Now',
+        date: 'August 2019 - August 2023',
         title: 'University Student <span> Multimedia Nusantara University </span>',
         desc: 'I am a student of Universitas Multimedia Nusantara majoring in Informatics.'
     },
